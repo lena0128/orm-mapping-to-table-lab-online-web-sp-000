@@ -30,6 +30,10 @@ DB[:conn].execute(sql)
 end
 
 def save
+  sql = <<-SQL
+  INSERT INTO students (name, album)
+  VALUES (?, ?)
+  SQL
 end
 
 def self.create
